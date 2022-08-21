@@ -41,7 +41,6 @@ console.log(names);
 let x = 0;
 
 for (let i = 0; i < names.length; i++) {
-    console.log(names[i].length);
     x = x + names[i].length
 }
 console.log('Average # of letters in each name for names array =  ' + (x / names.length));
@@ -67,16 +66,39 @@ console.log(names[0]);
 // created names array and add the length of each name to the nameLengths array.//
 // For example:
 
-namesArray = ["Kelly", "Sam", "Kate"] //given this array
-nameLengths = [5, 3, 4] //create this new array
+namesArray = ["Kelly", "Sam", "Kate"]
+nameLengths = [5, 3, 4]
 
+
+for (let i = 0; i < namesArray.length; i++) {
+    nameLengths.push(namesArray[i].length);
+}
+console.log(nameLengths);
+    
 
 /* 6.	Write a loop to iterate over the nameLengths array and calculate the sum of all 
 the elements in the array. Print the result to the console.*/
 
+let b = 0;
+for (i = 0; i < nameLengths.length; i++) {
+    b += nameLengths[i];
+}
+console.log(b);
+
 // 7.	Write a function that takes two parameters, word and n, as arguments and returns //
 //the word concatenated to itself n number of times. (i.e. if I pass in ‘Hello’ and 3, //
 //I would expect the function to return ‘HelloHelloHello’).//
+
+let c = hello('Hello', 6);
+
+function hello(word, n) {
+    for (i = 0; i < n; i++) {
+        return word[i].length;
+    }
+}
+console.log(c);
+
+
 
 // 8.	Write a function that takes two parameters, firstName and lastName, and returns a //
 //full name (the full name should be the first and the last name separated by a space).//
