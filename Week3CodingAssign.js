@@ -89,24 +89,46 @@ console.log(b);
 //the word concatenated to itself n number of times. (i.e. if I pass in ‘Hello’ and 3, //
 //I would expect the function to return ‘HelloHelloHello’).//
 
-let c = hello('Hello', 6);
-
 function hello(word, n) {
-    for (i = 0; i < n; i++) {
-        return word[i].length;
+    let c = '';
+     for (let i = 0; i < n; i++) {
+        c += word
     }
+        return c;
 }
-console.log(c);
-
-
+console.log(hello('Hello', 3));
 
 // 8.	Write a function that takes two parameters, firstName and lastName, and returns a //
 //full name (the full name should be the first and the last name separated by a space).//
 
+function fullName(firstName, lastName) {
+    return firstName + ' ' + lastName;
+}
+console.log(fullName('Elise', 'Schmidt'));
+
 // 9.	Write a function that takes an array of numbers and returns true if the sum of all the //
 //numbers in the array is greater than 100.//
 
+// let numbers = [1, 2, 3, 4, 99];
+// function greaterThan(numbers, sum) {
+//     let d = 0;
+//     for (i = 0; i < numbers.length; i++) {
+//         d += numbers.length[i];
+//     }}
+//     console.log(d)
+
 // 10.	Write a function that takes an array of numbers and returns the average of all the elements in the array.//
+
+// function average() {
+// let e = 0;
+//     for (let i = 0; i < numbers.length; i++) {
+//     e += numbers[i].length
+//     }
+//     e / numbers.length
+// }
+
+// console.log(f);
+
 
 // 11.	Write a function that takes two arrays of numbers and returns true if the average//
 // of the elements in the first array is greater than the average of the elements in the second array.//
