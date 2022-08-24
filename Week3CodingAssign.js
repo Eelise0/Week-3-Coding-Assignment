@@ -109,31 +109,42 @@ console.log(fullName('Elise', 'Schmidt'));
 // 9.	Write a function that takes an array of numbers and returns true if the sum of all the //
 //numbers in the array is greater than 100.//
 
-// let numbers = [1, 2, 3, 4, 99];
-// function greaterThan(numbers, sum) {
-//     let d = 0;
-//     for (i = 0; i < numbers.length; i++) {
-//         d += numbers.length[i];
-//     }}
-//     console.log(d)
+theArray = [1, 2, 4, 99];
+
+function greaterThan() {
+    let sum = theArray.reduce((accumulator, value) => {
+        return accumulator + value;
+    }, 0);
+        if (sum > 100) {
+            return true;
+        } else {
+            return false;
+        }
+        }
+    console.log(greaterThan());
 
 // 10.	Write a function that takes an array of numbers and returns the average of all the elements in the array.//
 
-// function average() {
-// let e = 0;
-//     for (let i = 0; i < numbers.length; i++) {
-//     e += numbers[i].length
-//     }
-//     e / numbers.length
-// }
+myArray = [1, 5, 4, 12, 11];
 
-// console.log(f);
+function averageElement (a, b)  {
+    return a + b;
+ }
+    let sum = myArray.reduce(averageElement);
+    let avg = sum / myArray.length;
+
+ console.log(avg);
 
 
 // 11.	Write a function that takes two arrays of numbers and returns true if the average//
 // of the elements in the first array is greater than the average of the elements in the second array.//
 
+
+
 // 12.	Write a function called willBuyDrink that takes a boolean isHotOutside, //
 //and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.//
+
+
+
 
 // 13.	Create a function of your own that solves a problem. In comments, write what the function does and why you created it.//
