@@ -168,9 +168,9 @@ console.log(willBuyDrink([true], [11]));
 
 // 13.	Create a function of your own that solves a problem. In comments, write what the function does and why you created it.//
 
-// My function below is a calculator to help me determine if I should take the time to study or not in any given day
-// based on the nuber of hours slept the night prior and how many hours I worked that day. This is useful because
-//if you try to study when you are very tired, there is a chance you will not retain the information. In theses cases
+// My function below is a calculator to help me determine if I should take the time to study or not on any given day
+// based on the number of hours slept the night prior and how many hours I worked that day. This is useful because
+//if you try to study when you are very tired, there is a chance you will not retain the information. In these cases
 //I should wait till a day where I get more sleep and work less hours. 
 
 function tooTiredToStudy (hoursOfSleep, hoursOfWork) {
