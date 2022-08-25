@@ -139,6 +139,12 @@ function averageElement (a, b)  {
 // 11.	Write a function that takes two arrays of numbers and returns true if the average//
 // of the elements in the first array is greater than the average of the elements in the second array.//
 
+// arrayOne = [1, 2, 3, 4];
+// arrayTwo = [5, 6, 7, 8];
+
+// function comparison() 
+
+
 
 
 // 12.	Write a function called willBuyDrink that takes a boolean isHotOutside, //
