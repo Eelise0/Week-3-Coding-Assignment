@@ -41,7 +41,7 @@ console.log(names);
 let x = 0;
 
 for (let i = 0; i < names.length; i++) {
-    x = x + names[i].length
+    x = x + names[i].length 
 }
 console.log('Average # of letters in each name for names array =  ' + (x / names.length));
 
@@ -137,20 +137,47 @@ function averageElement (a, b)  {
 
 
 // 11.	Write a function that takes two arrays of numbers and returns true if the average//
-// of the elements in the first array is greater than the average of the elements in the second array.//
+// of the elements in the first array is  greater than the average of the elements in the second array.//
 
-// arrayOne = [1, 2, 3, 4];
-// arrayTwo = [5, 6, 7, 8];
-
-// function comparison() 
-
-
-
+function isOneBiggerThanTwo (array1, array2) {
+    let sum1 = 0;
+    for (let i = 0; i < array1.length; i++) {
+      sum1 = sum1 + array1[i];
+    }
+    let sum2 = 0;
+    for (let i = 0; i < array2.length; i++) {
+      sum2 = sum2 + array2[i];
+    }
+    let avg1 = sum1 / (array1.length);
+    let avg2 = sum2 / (array2.length);
+    if (avg1 > avg2) {
+      return true;
+    }
+  }
+console.log(isOneBiggerThanTwo([1, 2, 4, 99], [1, 5, 4, 12, 11]));
 
 // 12.	Write a function called willBuyDrink that takes a boolean isHotOutside, //
 //and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.//
 
-
-
+function willBuyDrink (isHotOutside, moneyInPocket) {
+  if (isHotOutside = true && moneyInPocket > 10.50) {
+    return true;
+  }
+}
+console.log(willBuyDrink([true], [11]));
 
 // 13.	Create a function of your own that solves a problem. In comments, write what the function does and why you created it.//
+
+// My function below is a calculator to help me determine if I should take the time to study or not in any given day
+// based on the nuber of hours slept the night prior and how many hours I worked that day. This is useful because
+//if you try to study when you are very tired, there is a chance you will not retain the information. In theses cases
+//I should wait till a day where I get more sleep and work less hours. 
+
+function tooTiredToStudy (hoursOfSleep, hoursOfWork) {
+    if (hoursOfSleep <= 5.5 && hoursOfWork >= 10) {
+        return "There's a good chance you will not retain new information because you are tired. Don't study today.";
+    } else {
+        return "You should have enough energy to study. Don't be lazy!";
+    }
+} 
+console.log(tooTiredToStudy([12], [0]));
