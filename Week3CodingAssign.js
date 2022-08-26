@@ -11,14 +11,14 @@ console.log(ages);
 //to reference the last element, find it programmatically, ages[7] – ages[0] is not allowed). //
 //Print the result to the console.//
 
-console.log('Subracted first and last element = ' + (ages.pop() - ages.shift()));
+console.log(ages[ages.length-1] - ages[0]);
 console.log(ages);
 
 // b.	Add a new age to your array and repeat the step above to ensure it is dynamic (works for arrays of different lengths).//
 
 ages.push(29);
 console.log(ages);
-console.log('Subracted first and last element again after adding another element = ' + (ages.pop() - ages.shift()));
+console.log(ages[ages.length-1] - ages[0]);
 
 // c.	Use a loop to iterate through the array and calculate the average age. Print the result to the console.//
 
@@ -47,9 +47,10 @@ console.log('Average # of letters in each name for names array =  ' + (x / names
 
 // b.	Use a loop to iterate through the array again and concatenate all the names//
 
+let c = '';
 for (let i = 0; i < names.length; i++) {
-    console.log(names.join(''));
-}
+    c = c + names[i] + ' ' ;
+} console.log(c);
 
 // 3.	How do you access the last element of any array?//
 
@@ -109,52 +110,57 @@ console.log(fullName('Elise', 'Schmidt'));
 // 9.	Write a function that takes an array of numbers and returns true if the sum of all the //
 //numbers in the array is greater than 100.//
 
-theArray = [1, 2, 4, 99];
-
-function greaterThan() {
+function greaterThan(theArray) {
     let sum = theArray.reduce((accumulator, value) => {
-        return accumulator + value;
-    }, 0);
+        return accumulator + value;}, 0);
         if (sum > 100) {
             return true;
         } else {
             return false;
         }
         }
-    console.log(greaterThan());
+    console.log('Here ' + greaterThan(ages));
+
+function greaterThan100 (arr1) {
+
+}
 
 // 10.	Write a function that takes an array of numbers and returns the average of all the elements in the array.//
 
-myArray = [1, 5, 4, 12, 11];
-
-function averageElement (a, b)  {
-    return a + b;
- }
-    let sum = myArray.reduce(averageElement);
-    let avg = sum / myArray.length;
-
- console.log(avg);
+function averageElement (a)  {
+    let sum3 = 0;
+    for (let i = 0; i < a.length; i++) {
+        sum3 = sum3 + a[i];
+      } 
+      return sum3 / (a.length);
+}
+ console.log(averageElement(ages));
 
 
 // 11.	Write a function that takes two arrays of numbers and returns true if the average//
 // of the elements in the first array is  greater than the average of the elements in the second array.//
 
-function isOneBiggerThanTwo (array1, array2) {
-    let sum1 = 0;
-    for (let i = 0; i < array1.length; i++) {
-      sum1 = sum1 + array1[i];
-    }
-    let sum2 = 0;
-    for (let i = 0; i < array2.length; i++) {
-      sum2 = sum2 + array2[i];
-    }
-    let avg1 = sum1 / (array1.length);
-    let avg2 = sum2 / (array2.length);
-    if (avg1 > avg2) {
-      return true;
-    }
-  }
-console.log(isOneBiggerThanTwo([1, 2, 4, 99], [1, 5, 4, 12, 11]));
+function isOneBiggerThanTwo2 (array1, array2) {
+    return averageElement(array1) > averageElement(array2);
+ }
+ console.log(isOneBiggerThanTwo2([1, 2, 4, 99], [1, 5, 4, 12, 11]));
+
+// function isOneBiggerThanTwo (array1, array2) {
+//     let sum1 = 0;
+//     for (let i = 0; i < array1.length; i++) {
+//       sum1 = sum1 + array1[i];
+//     }
+//     let sum2 = 0;
+//     for (let i = 0; i < array2.length; i++) {
+//       sum2 = sum2 + array2[i];
+//     }
+//     let avg1 = sum1 / (array1.length);
+//     let avg2 = sum2 / (array2.length);
+//     if (avg1 > avg2) {
+//       return true;
+//     }
+//   }
+// console.log(isOneBiggerThanTwo([1, 2, 4, 99], [1, 5, 4, 12, 11]));
 
 // 12.	Write a function called willBuyDrink that takes a boolean isHotOutside, //
 //and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.//
