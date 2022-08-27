@@ -12,12 +12,10 @@ console.log(ages);
 //Print the result to the console.//
 
 console.log(ages[ages.length-1] - ages[0]);
-console.log(ages);
 
 // b.	Add a new age to your array and repeat the step above to ensure it is dynamic (works for arrays of different lengths).//
 
 ages.push(29);
-console.log(ages);
 console.log(ages[ages.length-1] - ages[0]);
 
 // c.	Use a loop to iterate through the array and calculate the average age. Print the result to the console.//
@@ -50,17 +48,16 @@ console.log('Average # of letters in each name for names array =  ' + (x / names
 let c = '';
 for (let i = 0; i < names.length; i++) {
     c = c + names[i] + ' ' ;
-} console.log(c);
+} 
+console.log(c);
 
 // 3.	How do you access the last element of any array?//
 
-//Comment From Elise S - create a variable and save the last array item to it using length-1 and then print that to console.//
 let last = names[names.length - 1];
 console.log(last);
 
 // 4.	How do you access the first element of any array?//
 
-//Comment From Elise S -The zero index will always be the first element in the array so calling 0 and printing to console will work.//
 console.log(names[0]);
 
 // 5.	Create a new array called nameLengths. Write a loop to iterate over the previously //
@@ -82,7 +79,7 @@ the elements in the array. Print the result to the console.*/
 
 let b = 0;
 for (i = 0; i < nameLengths.length; i++) {
-    b += nameLengths[i];
+    b = b + nameLengths[i];
 }
 console.log(b);
 
@@ -93,7 +90,7 @@ console.log(b);
 function hello(word, n) {
     let c = '';
      for (let i = 0; i < n; i++) {
-        c += word
+        c = c + word;
     }
         return c;
 }
@@ -111,19 +108,15 @@ console.log(fullName('Elise', 'Schmidt'));
 //numbers in the array is greater than 100.//
 
 function greaterThan(theArray) {
-    let sum = theArray.reduce((accumulator, value) => {
-        return accumulator + value;}, 0);
-        if (sum > 100) {
-            return true;
-        } else {
-            return false;
-        }
-        }
-    console.log('Here ' + greaterThan(ages));
-
-function greaterThan100 (arr1) {
-
+let y = 0;
+for (i = 0; i < theArray.length; i++) {
+    y = y + theArray[i];
 }
+if (y > 100) {
+    return true;
+}
+}
+console.log(greaterThan(ages));
 
 // 10.	Write a function that takes an array of numbers and returns the average of all the elements in the array.//
 
@@ -145,32 +138,17 @@ function isOneBiggerThanTwo2 (array1, array2) {
  }
  console.log(isOneBiggerThanTwo2([1, 2, 4, 99], [1, 5, 4, 12, 11]));
 
-// function isOneBiggerThanTwo (array1, array2) {
-//     let sum1 = 0;
-//     for (let i = 0; i < array1.length; i++) {
-//       sum1 = sum1 + array1[i];
-//     }
-//     let sum2 = 0;
-//     for (let i = 0; i < array2.length; i++) {
-//       sum2 = sum2 + array2[i];
-//     }
-//     let avg1 = sum1 / (array1.length);
-//     let avg2 = sum2 / (array2.length);
-//     if (avg1 > avg2) {
-//       return true;
-//     }
-//   }
-// console.log(isOneBiggerThanTwo([1, 2, 4, 99], [1, 5, 4, 12, 11]));
-
 // 12.	Write a function called willBuyDrink that takes a boolean isHotOutside, //
 //and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.//
 
 function willBuyDrink (isHotOutside, moneyInPocket) {
-  if (isHotOutside = true && moneyInPocket > 10.50) {
-    return true;
+  if (isHotOutside === true && moneyInPocket > 10.50) {
+    return true
+  } else {
+    return false
   }
 }
-console.log(willBuyDrink([true], [11]));
+console.log(willBuyDrink(false, 11));
 
 // 13.	Create a function of your own that solves a problem. In comments, write what the function does and why you created it.//
 
@@ -186,4 +164,4 @@ function tooTiredToStudy (hoursOfSleep, hoursOfWork) {
         return "You should have enough energy to study. Don't be lazy!";
     }
 } 
-console.log(tooTiredToStudy([12], [0]));
+console.log(tooTiredToStudy(12, 0));
