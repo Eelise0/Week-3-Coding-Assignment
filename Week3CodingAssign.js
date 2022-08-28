@@ -20,9 +20,8 @@ console.log(ages[ages.length-1] - ages[0]);
 
 // c.	Use a loop to iterate through the array and calculate the average age. Print the result to the console.//
 
-console.log(ages);
-let total = 0;
 
+let total = 0;
 for (let i = 0; i < ages.length; i++) {
     total = total + ages[i];
 }
@@ -37,7 +36,6 @@ console.log(names);
 //Print the result to the console.//
 
 let x = 0;
-
 for (let i = 0; i < names.length; i++) {
     x = x + names[i].length 
 }
@@ -120,6 +118,8 @@ console.log(greaterThan(ages));
 
 // 10.	Write a function that takes an array of numbers and returns the average of all the elements in the array.//
 
+console.log(ages);
+
 function averageElement (a)  {
     let sum3 = 0;
     for (let i = 0; i < a.length; i++) {
@@ -133,10 +133,10 @@ function averageElement (a)  {
 // 11.	Write a function that takes two arrays of numbers and returns true if the average//
 // of the elements in the first array is  greater than the average of the elements in the second array.//
 
-function isOneBiggerThanTwo2 (array1, array2) {
+function isOneBiggerThanTwo (array1, array2) {
     return averageElement(array1) > averageElement(array2);
  }
- console.log(isOneBiggerThanTwo2([1, 2, 4, 99], [1, 5, 4, 12, 11]));
+ console.log(isOneBiggerThanTwo([1, 2, 4, 99], [1, 5, 4, 12, 11]));
 
 // 12.	Write a function called willBuyDrink that takes a boolean isHotOutside, //
 //and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.//
